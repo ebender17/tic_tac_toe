@@ -1,4 +1,22 @@
 # Lab 5 - Tic Tac Toe GUI
+## Assignment Self Assessment:
+#### Reflection
+[//]: <> (share your thoughts on the assignment, things you learnt and would like to remember when you look back at this assignment)
+
+
+#### Self Assessment
+- [ ] The program runs with no errors.
+- [ ] Create the GUI forms.
+- [ ] The logic is sound.
+- [ ] Proper usage of Git and GitHub (frequent commits, explanatory commit messages)
+
+**Your Grade:**  /20
+
+**Notes:**
+
+**How long did it take you to complete this assigment?**
+
+______________________________________________________________________
 
 ## Lab Goals:
 1. Get practice with using the Java GUI methods.
