@@ -2,6 +2,16 @@ import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.*;
 public class TicTacToeFrame extends JFrame {
+
+    //Game
+    TicTacToe game = new TicTacToe();
+    TicTacToeTile[][] board = game.getBoard();
+
+    //Score count
+    int XWins;
+    int OWins;
+    int Ties;
+
     //Panels
     JPanel mainPanel = new JPanel();
     JPanel gameBoardPanel = new JPanel();
