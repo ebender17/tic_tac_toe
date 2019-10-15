@@ -2,6 +2,10 @@ import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class TicTacToeFrame extends JFrame {
 
     //Game
@@ -85,6 +89,42 @@ public class TicTacToeFrame extends JFrame {
 
 
     }
+
+    private void setupGameBoard() {
+        for (int row = 0; row < game.getBoardSize(); row++) {
+            for (int col = 0; col < game.getBoardSize(); col++) {
+                gameBoardPanel.add(board[row][col]);
+                board[row][col].setFont(XOButtons);
+                board[row][col].addActionListener((ActionEvent actionEvent)-> {
+                    TicTacToeTile selected = (TicTacToeTile) actionEvent.getSource();
+                    game.playTurn(selected.getRow(), selected.getColumn());
+                    selected.setForeground(
+                            game.getCurrentTurn().name().equals("X") ? Color.BLUE: Color.RED //if current turn equal X set color to red, else blue
+                    );
+                    for(ActionListener al: selected.getActionListeners()) {
+                        selected.removeActionListener(al);
+                    }
+
+                    game.calculateResult();
+
+                    if(game.isOver()) {
+                        System.out.println("The game is over and the result is: " + game.getResult());
+                        updateGameResults();
+                        Boolean done = SafeInput.getYNConfirmDialog("Play Again?");
+
+                        if (!done) {
+                            System.exit(0);
+                        }
+
+                        resetGame();
+                    }
+                });
+
+            }
+
+        }
+    }
+
     private void updateGameResults() {
         switch (game.getResult()) {
             case "X":
