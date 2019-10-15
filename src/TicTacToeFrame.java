@@ -1,6 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 public class TicTacToeFrame extends JFrame {
 
     //Game
@@ -43,4 +44,38 @@ public class TicTacToeFrame extends JFrame {
         setSize(700, 500);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    private void UISetup() {
+        //set up layout of each panel
+        mainPanel.setLayout(mainPanelLayout);
+        buttonPanel.setLayout(buttonPanelLayout);
+        gameBoardPanel.setLayout(boardPanelLayout);
+        resultsPanel.setLayout(resultsPanelLayout);
+
+        //set the fonts
+        XWinsLabel.setFont(gameBoardFont);
+        OWinsLabel.setFont(gameBoardFont);
+        TiesLabel.setFont(gameBoardFont);
+        titleLabel.setFont(mainLabelFont);
+
+        //create game board
+        setupGameBoard();
+
+        //add result labels to result panel
+        resultsPanel.add(XWinsLabel);
+        resultsPanel.add(OWinsLabel);
+        resultsPanel.add(TiesLabel);
+
+        //add actionLister to quit button & add quit button to button panel
+        quitButton.addActionListener((ActionEvent actionEvent)-> System.exit(0));
+        buttonPanel.add(quitButton);
+
+        //add all panels to main panel
+        mainPanel.add(titleLabel, BorderLayout.NORTH);
+        mainPanel.add(gameBoardPanel, BorderLayout.CENTER);
+        mainPanel.add(resultsPanel, BorderLayout.EAST);
+        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
+
+
     }
