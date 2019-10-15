@@ -1,6 +1,20 @@
 import org.w3c.dom.ls.LSOutput;
+
 import javax.swing.*;
 public class TicTacToeFrame extends JFrame {
+    //Panels
+    JPanel mainPanel = new JPanel();
+    JPanel gameBoardPanel = new JPanel();
+    JPanel buttonPanel = new JPanel();
+    JPanel resultsPanel = new JPanel();
+
+    //Labels
+    JLabel titleLabel = new JLabel("Tic Tac Toe");
+    JLabel XWinsLabel = new JLabel("X : " + XWins);
+    JLabel OWinsLabel = new JLabel("Y : " + OWins);
+    JLabel TiesLabel = new JLabel("Ties: " + Ties);
+    //Button
+    JButton quitButton = new JButton("Quit", new ImageIcon("assets/quit.png"));
     public TicTacToeFrame(String title) {
         super(title);
         add(mainPanel);
