@@ -85,3 +85,18 @@ public class TicTacToeFrame extends JFrame {
 
 
     }
+    private void updateGameResults() {
+        switch (game.getResult()) {
+            case "X":
+                XWins++;
+                break;
+            case "0":
+                OWins++;
+                break;
+            case "tie":
+                Ties++;
+                break;
+
+        }
+
+    }
