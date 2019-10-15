@@ -13,6 +13,12 @@ public class TicTacToeFrame extends JFrame {
     JLabel XWinsLabel = new JLabel("X : " + XWins);
     JLabel OWinsLabel = new JLabel("Y : " + OWins);
     JLabel TiesLabel = new JLabel("Ties: " + Ties);
+
+    //Fonts
+    Font gameBoardFont = new Font("Helvetica", Font.BOLD, 20);
+    Font XOButtons = new Font("Helvetica", Font.BOLD, 30);
+    Font mainLabelFont = new Font("Helvetica", Font.BOLD, 48);
+
     //Layout manager objects
     BorderLayout mainPanelLayout = new BorderLayout();
     BorderLayout buttonPanelLayout = new BorderLayout();
