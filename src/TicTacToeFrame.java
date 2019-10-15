@@ -13,6 +13,12 @@ public class TicTacToeFrame extends JFrame {
     JLabel XWinsLabel = new JLabel("X : " + XWins);
     JLabel OWinsLabel = new JLabel("Y : " + OWins);
     JLabel TiesLabel = new JLabel("Ties: " + Ties);
+    //Layout manager objects
+    BorderLayout mainPanelLayout = new BorderLayout();
+    BorderLayout buttonPanelLayout = new BorderLayout();
+    GridLayout boardPanelLayout = new GridLayout(game.getBoardSize(), game.getBoardSize());
+    GridLayout resultsPanelLayout = new GridLayout(3, 1);
+
     //Button
     JButton quitButton = new JButton("Quit", new ImageIcon("assets/quit.png"));
     public TicTacToeFrame(String title) {
