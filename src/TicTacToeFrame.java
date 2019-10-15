@@ -38,8 +38,14 @@ public class TicTacToeFrame extends JFrame {
 
     //Button
     JButton quitButton = new JButton("Quit", new ImageIcon("assets/quit.png"));
+
+
+
     public TicTacToeFrame(String title) {
         super(title);
+
+        UISetup();
+
         add(mainPanel);
         setSize(700, 500);
         setVisible(true);
