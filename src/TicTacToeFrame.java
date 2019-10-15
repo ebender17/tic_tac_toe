@@ -100,3 +100,13 @@ public class TicTacToeFrame extends JFrame {
         }
 
     }
+
+
+    private void resetGame() {
+
+        game = new TicTacToe();
+        board = game.getBoard();
+        gameBoardPanel.removeAll();
+        setupGameBoard();
+    }
+}
