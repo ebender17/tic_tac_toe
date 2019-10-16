@@ -77,7 +77,7 @@ public class TicTacToeFrame extends JFrame {
         resultsPanel.add(OWinsLabel);
         resultsPanel.add(TiesLabel);
 
-        //add actionLister to quit button & add quit button to button panel
+        //add actionListener to quit button & add quit button to button panel
         quitButton.addActionListener((ActionEvent actionEvent)-> System.exit(0));
         buttonPanel.add(quitButton);
 
@@ -129,12 +129,15 @@ public class TicTacToeFrame extends JFrame {
         switch (game.getResult()) {
             case "X":
                 XWins++;
+                XWinsLabel.setText("X: " + XWins);
                 break;
             case "0":
                 OWins++;
+                OWinsLabel.setText("O: " + OWins);
                 break;
             case "tie":
                 Ties++;
+                TiesLabel.setText("Ties: " + Ties);
                 break;
 
         }
