@@ -2,6 +2,7 @@
 ## Assignment Self Assessment:
 #### Reflection
 [//]: <> (share your thoughts on the assignment, things you learnt and would like to remember when you look back at this assignment)
+Assignment completed for Computer Programming II. 
 
 
 #### Self Assessment
@@ -12,10 +13,6 @@
 
 **Your Grade:**  20/20
 
-**Notes:**
-
-**How long did it take you to complete this assigment?**
-Three hours
 
 ______________________________________________________________________
 
